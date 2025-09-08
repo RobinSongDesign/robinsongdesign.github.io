@@ -6,13 +6,32 @@
   
   <title>Robin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="花序的秘密：从斐波那契数列到城市设计1. 引言：作为园林专业的学生，在本科期间树木、花卉学自然是必修课。课本上有一个很重要的描述——花序是种子植物的幼芽变异而来，包含花序各部分的长度和性质的各种变异。同一种类的植物，具有着不同的的DNA，从幼芽开始生长，最后几乎不可能有完全一样的植株，但是我们又可以通过各种特性，判断他们都是属于同种类的植物。生命的过程就很耐人寻味，在不变中蕴含着万变，在均一中隐藏">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Robin&#39;s Blog">
-<meta property="og:url" content="https://robinsongdesign.github.io/index.html">
+<meta property="og:url" content="https://robinsongdesign.github.io/2025/09/08/%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system/index.html">
 <meta property="og:site_name" content="Robin&#39;s Blog">
+<meta property="og:description" content="花序的秘密：从斐波那契数列到城市设计1. 引言：作为园林专业的学生，在本科期间树木、花卉学自然是必修课。课本上有一个很重要的描述——花序是种子植物的幼芽变异而来，包含花序各部分的长度和性质的各种变异。同一种类的植物，具有着不同的的DNA，从幼芽开始生长，最后几乎不可能有完全一样的植株，但是我们又可以通过各种特性，判断他们都是属于同种类的植物。生命的过程就很耐人寻味，在不变中蕴含着万变，在均一中隐藏">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C200px-Mandelbrot_sequence_new.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets/image-20250125193924857-1757294702611-1.png">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB2.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB1.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB3.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB4.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5Cimage-20250131223205090.png">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB5.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5Cimage-20250201131513570.png">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB6.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB7.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5Cimage-20250201140713877.png">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB8.gif">
+<meta property="og:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C%E5%8A%A8%E7%94%BB9.gif">
+<meta property="article:published_time" content="2025-09-08T01:20:15.320Z">
+<meta property="article:modified_time" content="2025-09-08T01:26:35.891Z">
 <meta property="article:author" content="Robin Song">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://robinsongdesign.github.io/.%5C%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system.assets%5C200px-Mandelbrot_sequence_new.gif">
   
     <link rel="alternate" href="/atom.xml" title="Robin's Blog" type="application/atom+xml">
   
@@ -69,9 +88,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-花序的秘密_从斐波那契数列到L-system" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-花序的秘密_从斐波那契数列到L-system" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/09/08/%E8%8A%B1%E5%BA%8F%E7%9A%84%E7%A7%98%E5%AF%86_%E4%BB%8E%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%88%B0L-system/" class="article-date">
   <time class="dt-published" datetime="2025-09-08T01:20:15.320Z" itemprop="datePublished">2025-09-08</time>
@@ -209,11 +226,9 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
   
+</article>
 
 
 </section>
